@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        {{ form_start (user_form) }}
+        {{ form_row(user_form.login) }}
+        {{ form_row(user_form.password) }}
+        {{ form_row(user_form.submited , {'label': 'Авторизация'}) }}
+        {{ form_end (user_form, {'render_rest': false}) }}
+    </div>
+{% endblock %}

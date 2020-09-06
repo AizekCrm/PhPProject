@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if is_Authentication == true %}
+        <div>
+            <h3>Вы вошли как {{ login }}</h3>
+            <a class="btn btn-primary" href="user">Профиль</a>
+        </div>
+    {% else %}
+        <div>
+            <a href="registration">Регистрация</a>
+            <a href="authorization">Авторизация</a>
+        </div>
+    {% endif %}
+{% endblock %}
